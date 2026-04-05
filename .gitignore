@@ -1,0 +1,27 @@
+# Python 运行缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境 (防止把巨大的 Python 环境传到网上)
+venv/
+.venv/
+
+# 本项目生成的业务缓存和文件夹
+.sim_image_cache.json
+Review_Inferior_Images/
+
+# 打包生成的产物 (防误传几百兆的 exe)
+build/
+dist/
+*.spec
+*.exe
+
+# IDE/编辑器配置 (例如 VS Code 或 PyCharm)
+.vscode/
+.idea/
+
+# 操作系统生成的隐藏文件
+.DS_Store
+._*
+Thumbs.db

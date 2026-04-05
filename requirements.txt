@@ -1,0 +1,11 @@
+Pillow>=10.0.0
+imagehash>=4.3.1
+tqdm>=4.66.1
+send2trash>=2.1.0
+
+# === 可选依赖 (Optional) ===
+# 支持苹果 iPhone 的 .HEIC 照片格式
+pillow-heif>=0.14.0
+# 激活 AI 深度学习检测引擎 (彻底消除误报/漏报)
+# torch>=2.0.0
+# torchvision>=0.15.0
