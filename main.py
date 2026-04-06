@@ -1,5 +1,13 @@
 import sys # sys 模块提供了访问由解释器使用或维护的变量以及与解释器强烈交互的函数。在这里用来获取命令行参数。
 import multiprocessing # 用于支持多进程编程。在这里主要为了解决 Windows 下打包成可执行文件的兼容性问题。
+import os
+
+# 【关键修复】修复 PyInstaller --noconsole 打包后，标准输出被剥离导致 print() 和 tqdm 报错的问题
+# 将所有无处安放的控制台输出重定向到系统的“黑洞”（devnull）中，防止程序崩溃
+if sys.stdout is None:
+    sys.stdout = open(os.devnull, 'w')
+if sys.stderr is None:
+    sys.stderr = open(os.devnull, 'w')
 
 def start_gui():
     """
